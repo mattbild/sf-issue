@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="text-center">
+        {% if is_granted('ROLE_ADMIN') %}
+            <h1> You are logged in as 'admin' ... </h1>
+            <h2>
+                You can not see this page as anonymous, even if you <a href="{{  path('app_logout') }}">log out</a>
+            </h2>
+        {% elseif is_granted('ROLE_USER') %}
+            <h1>You are logged in as 'user' </h1>
+            <h2>
+                And you can <a href="{{  path('app_logout') }}" style=""> logout</a>
+                OR visite the <a href="{{  path('secured') }}" style=""> secured page</a>
+            </h2>
+        {% else %}
+            <h1>You are not logged </h1>
+            <h2>
+                You can <a href="{{  path('app_login') }}">log in</a> using
+            </h2>
+            <ul>
+                <li><h2>username : user</h2>
+                </li><li><h2> password: secret</h2></li>
+            </ul>
+        {% endif %}
+    </div>
+
+{% endblock %}

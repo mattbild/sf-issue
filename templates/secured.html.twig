@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User only{% endblock %}
+
+{% block body %}
+
+    <div class="text-center">
+        <h1>You are granted with 'ROLE_USER' </h1>
+        <h2>
+            And you can <a href="{{  path('home') }}" style=""> back home</a>
+            OR <a href="{{  path('app_logout') }}" style=""> logout</a>
+        </h2>
+    </div>
+
+{% endblock %}
