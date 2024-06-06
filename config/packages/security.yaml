@@ -16,8 +16,8 @@ security:
                 path: app_logout
 
         # this authenticator forces the user to be logged in for every page (even the ones declared in access_control)
-#            custom_authenticators:
-#                - App\Security\CustomAuthenticator
+            # custom_authenticators:
+            #    - App\Security\CustomAuthenticator
 
         # this one works fine
             form_login:

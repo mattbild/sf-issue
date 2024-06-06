@@ -10,15 +10,20 @@ To run the project you need :
 - composer
 ```
 
-Installation - Running steps :  
+Installation steps :  
 ```
-- clone the project
-- cd into it
-- run composer install
-- run php bin/console doc:sch:create ?
-- run php bin/console doc:fix:load ?
-- run symfony server:start
+clone the project
+cd into it 
 ```
+
+```
+$ composer install
+$ php bin/console doctrine:schema:create
+$ php bin/console doctrine:fixture:load
+```
+Run with symfony cli or in a server :  
+`$ symfony server:start`
+
 
 What I what to achieve is :
 - when an anonymous user access / => display the page
